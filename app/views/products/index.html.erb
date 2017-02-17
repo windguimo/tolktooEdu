@@ -14,7 +14,9 @@
 							  <img src="http://unsplash.it/300/200" alt="kudoz" class="product-image hidden-xs">
 							  <div class='product-body'>
 							    <h3><%=product.name%></h3>
-							    <p><%=product.url%></p>
+							   	
+							    <%= link_to product.name, product_path(product) %> (<%=product.tagline%>)
+							    <%= link_to "Delete", product_path(product), method: :Delete %>
 							  </div>
 							  <ul class="list-inline product-controls product-controls-hidden hidden-sm hidden-xs">
 							    <li><a href=""><i class="fa fa-heart"></i></a></li>
@@ -22,10 +24,18 @@
 							    <li><a href=""><i class="fa fa-star"></i></a></li>
 							  </ul>
 							</div>
-							
+
 						<%end%>
+			<p>	
+			<%= link_to "Revenir à l'acceuil", root_path, class: "btn btn-success" %>
+			<%= link_to "Ajouter un nouveau produit", new_product_path, class: "btn btn-primary" %>
+			</p>
+
 		</div>
 		
 	</div>
+
+
+
 </div>	
 

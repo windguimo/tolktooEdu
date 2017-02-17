@@ -1,0 +1,8 @@
+			<%=simple_form_for @product do |f| %>
+				<%= f.input :name, placeholder: "Kudoz", label: "Which Product ?" %>
+				<%= f.input :url, placeholder: "http://getkudoz.com", label: "Which Url ?" %>
+				<%= f.input :tagline, placeholder: "http://getkudoz.com", label: "Which tagline ?" %>
+				<%= f.input :category, collection: ["tech", "education","design"], prompt: "Which category ?" %>
+				<%= f.button :submit, "Ajouter", class: "btn btn-primary" %>
+			<%= link_to "Revenir à la liste des produits", products_path, class: "btn btn-success" %>
+			<%end%>
